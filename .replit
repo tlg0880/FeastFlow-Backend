@@ -1,0 +1,43 @@
+# The command to run your development server
+run = "npm run dev"
+
+# The file that represents the entry point of your application
+entrypoint = "pages/index.js"
+
+# A list of globs that specifies which files and directories should be hidden in the workspace.
+hidden = ["node_modules", ".next"]
+modules = ["nodejs-20", "postgresql-16"]
+
+# Configuration for the Replit package manager
+[packager]
+# A list of globs that specifies which files and directories should not be overwritten by the package manager.
+ignored_paths = ["node_modules"]
+
+[packager.features]
+# Enable package management and installation through the packager.
+package_search = true
+# Enable a user-interface for guessing which packages to install.
+guess_imports = true
+# Enable a user-interface for managing package installation and removal.
+packager_widge = true
+
+# Configuration for environment variables
+[env]
+# Set the NODE_ENV variable to 'development' for development-specific features
+NODE_ENV = "development"
+
+# Configuration for the language server protocol
+[languages.javascript]
+# A glob that specifies which files should be handled by this language server.
+pattern = "**/*.{js,jsx,ts,tsx}"
+# The name of the language server to use for this language.
+language_server_name = "typescript"
+
+# Configuration for how the application is deployed.
+[deployment]
+# The command to run to build your application for production.
+build_command = "npm run build"
+# The command to run to start your application in production.
+run_command = "npm run start"
+# The name of the deployment target. "lite" is a lightweight node environment.
+deployment_target = "lite"
