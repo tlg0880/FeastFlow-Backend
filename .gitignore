@@ -131,3 +131,13 @@ dist
 
 # Replit debugger
 .breakpoints
+
+# Node
+node_modules/
+dist/
+
+# Replit
+.replit
+replit.nix
+
+.vs/
